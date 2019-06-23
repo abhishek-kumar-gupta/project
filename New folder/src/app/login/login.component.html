@@ -1,0 +1,30 @@
+<form class="form-1" [formGroup] = "signupForm" (ngSubmit)= "OnSubmit()">
+
+  <p class="field">
+
+  <input type ="text"     placeholder ="UserName" formControlName="username"><br>
+  <i class="icon-user icon-large"></i>
+  <span *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched">Please Enter Your UserName</span><br>
+</p>
+
+<p class="field">
+  <input type ="text"     placeholder ="Password" formControlName="password"><br>
+  <i class="icon-lock icon-large"></i>
+<span *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched">Please Enter Password </span><br>
+</p>
+
+<p class="submit">
+<input type="submit" value="Submit">
+<i class="icon-arrow-right icon-large"></i>
+</p>
+
+
+
+</form> 
+
+
+
+
+
+
+

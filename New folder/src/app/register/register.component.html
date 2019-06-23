@@ -1,0 +1,60 @@
+<html> 
+  <body> 
+    <div class = "main"> 
+    <marquee class="marq" bgcolor = "Green" direction = "left" loop="" > 
+        <div class="g1">Register Here</div> 
+        
+    </marquee> 
+    </div> 
+</body> 
+</html>
+
+
+<form  class="form-1" [formGroup]= "signupForm" (ngSubmit)= "OnSubmit()">
+   
+  <p class="field">
+  <input type ="text"     placeholder ="Name" formControlName="name"><br>
+  <i class="icon-user icon-large"></i>
+  <span *ngIf="!signupForm.get('name').valid && signupForm.get('name').touched">Please Enter Your Name</span><br>
+</p>
+
+
+
+<p class="field">
+    <input type ="email" placeholder ="email" formControlName="email"><br>
+    <i class="icon-user icon-large"></i>
+    <span *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">Please Enter Your email</span><br>
+  </p>
+
+<p class="field">
+  <input type ="text" placeholder ="UserName" formControlName="username"><br>
+  <i class="icon-lock icon-large"></i>
+  <span *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched">Please Enter Your UserName</span><br>
+</p> 
+
+
+<p class="field">
+  <input type ="text"     placeholder ="Password" formControlName="password"><br>
+  <i class="icon-lock icon-large"></i>
+  <span *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched">Please Enter Password For Your Account</span><br>
+</p> 
+
+
+<p class="field">
+  <input type ="text"  appConfirmEqualValidator="password"   placeholder ="ConfirmPassword" formControlName="confirmpassword"><br>
+  <!-- <span *ngIf="!signupForm.get('confirmpassword').valid && signupForm.get('confirmpassword').touched">Password Mis-Match</span><br> -->
+  <i class="icon-lock icon-large"></i>
+  <span *ngIf="!signupForm.get('confirmpassword').valid && signupForm.get('confirmpassword').touched ||  signupForm.get('password').value!=signupForm.get('confirmpassword').value ">Password Mis-Match</span><br>
+</p> 
+  
+
+<p class="field">
+  <input type="submit" value="Submit"  [disabled]="!signupForm.valid">
+  <i class="icon-lock icon-large"></i>
+</p> 
+  
+
+
+</form>
+
+

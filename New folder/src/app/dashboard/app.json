@@ -1,0 +1,85 @@
+<div class="container">
+      <div class="row">
+
+      <div class="card col-md-3" style="width:250px">
+        <img class="card-img-top" src="\assets\index1.jpg" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Hotel Taz</h4>
+          <p class="card-text"> Hotel Taz is very famouus , situated in Mumbai</p>
+          <a href="#" class="btn btn-primary">View</a>
+        </div>
+      
+    </div>
+    
+      
+        
+        <div class="card col-md-3" style="width:250px">
+          <img class="card-img-top" src="\assets\index2.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Hotel Hertej</h4>
+            <p class="card-text">Hotel Hertej is very famouus , situated in Mumbai</p>
+            <a href="#" class="btn btn-primary">View</a>
+          </div>
+        </div>
+
+        <div class="card col-md-3" style="width:250px">
+          <img class="card-img-top" src="\assets\index3.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Hotel Samode </h4>
+            <p class="card-text">Hotel Samode is very famouus , situated in Mumbai</p>
+            <a href="#" class="btn btn-primary">View</a>
+          </div>
+        </div>
+        
+
+      <div class="card col-md-3" style="width:250px">
+        <img class="card-img-top" src="\assets\index4.jpg" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Hotel Oberoi </h4>
+          <p class="card-text"> Hotel Oberoi Grand is very famouus , situated in Mumbai</p>
+          <a href="#" class="btn btn-primary">View</a>
+        </div>
+      
+    </div>
+    <div class="card col-md-3" style="width:250px">
+      <img class="card-img-top" src="\assets\index5.jpg" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">The Imperial Hotel</h4>
+        <p class="card-text"> The Imperial Hotel is very famouus , situated in Mumbai</p>
+        <a href="#" class="btn btn-primary">View</a>
+      </div>
+    
+  </div>
+
+
+  <div class="card col-md-3" style="width:250px">
+        <img class="card-img-top" src="\assets\index6.jpg" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Coconut Resort</h4>
+          <p class="card-text"> Hotel Taz is very famouus , situated in Mumbai</p>
+          <a href="#" class="btn btn-primary">View</a>
+        </div>
+      
+    </div>
+      
+        
+        <div class="card col-md-3" style="width:250px">
+          <img class="card-img-top" src="\assets\index7.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title"> Palais de Mahe</h4>
+            <p class="card-text">Hotel Hertej is very famouus , situated in Mumbai</p>
+            <a href="#" class="btn btn-primary">View</a>
+          </div>
+        </div>
+
+        <div class="card col-md-3" style="width:250px">
+          <img class="card-img-top" src="\assets\index8.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Naini Retreat</h4>
+            <p class="card-text">Hotel Hertej is very famouus , situated in Mumbai</p>
+            <a href="#" class="btn btn-primary">View</a>
+          </div>
+        </div>
+      </div>
+   </div>
+     
