@@ -113,13 +113,26 @@ app.get('/api/cources', (req, res)=>
 app.get('/api/cources/:id', (req , res)=>
 {
     res.send(req.params.id);
-});    //http://localhost:4200/api/cources/1
+});    //http://localhost:4200/api/cources/1   // query parameters 
+
+
+
 
 
 app.get('/api/posts/:year/:month', (req , res)=>
 {
     res.send(req.params);
 });
+
+
+###use below app.get after commenting above one i.e req.param below are req query
+
+app.get('/api/posts/:year/:month', (req , res)=>
+{
+    res.send(req.query);
+});
+//http://localhost:4200/api/posts/2019/1?sortBy=name
+
 
 
 const port = process.env.PORT || 4200;   
