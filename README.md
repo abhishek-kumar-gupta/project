@@ -12,6 +12,10 @@ console.log(result);
 
 
 
+
+
+
+
  ##### 44 Building Web Server using Express
  
  // In cmd run
@@ -46,7 +50,13 @@ app.listen(4200, ()=> console.log('Listening on port 3000...'));
 
 
 
-##### Environment variables 
+
+
+
+
+
+
+##### 46 Environment variables 
 
 ##// we have made changes in same above code 
 
@@ -73,6 +83,53 @@ app.listen(port, ()=> console.log(`Listening on port ${port}...`));  // specify 
 
 // in our machine no environment varible is defined so we need to define.
 // we can define Port By commant set PORT=port-numebr example set PORT=4525
+
+
+
+
+
+
+
+##### 47 Route Parameters 
+//we have accessed  particular element of array using id param
+
+// we have made changes in same above 46thcode 
+
+
+const express =require('express'); 
+
+const app = express(); 
+
+
+
+app.get('/',(req, res)=> {
+  res.send('Hello World.......');
+}) ;   
+app.get('/api/cources', (req, res)=>
+{           
+   res.send([1,2,3]);
+});
+
+app.get('/api/cources/:id', (req , res)=>
+{
+    res.send(req.params.id);
+});    //http://localhost:4200/api/cources/1
+
+
+app.get('/api/posts/:year/:month', (req , res)=>
+{
+    res.send(req.params);
+});
+
+
+const port = process.env.PORT || 4200;   
+app.listen(port, ()=> console.log(`Listening on port ${port}...`));  
+
+
+
+
+
+
 
 
 
