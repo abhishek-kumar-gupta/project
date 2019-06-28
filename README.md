@@ -46,6 +46,35 @@ app.listen(4200, ()=> console.log('Listening on port 3000...'));
 
 
 
+##### Environment variables 
+
+##// we have made changes in same above code 
+
+
+const express =require('express'); 
+
+const app = express(); 
+
+
+
+app.get('/',(req, res)=> {
+  res.send('Hello World.......');
+}) ;   
+app.get('/api/cources', (req, res)=>
+{           
+   res.send([1,2,3]);
+});
+
+
+const port = process.env.PORT || 4200; // using Environment variables. in place of below line
+//app.listen(4200, ()=> console.log('Listening on port 4200...'));   
+app.listen(port, ()=> console.log(`Listening on port ${port}...`));  // specify port in place of 4200and used backtick to display that particular port
+ 
+
+// in our machine no environment varible is defined so we need to define.
+// we can define Port By commant set PORT=port-numebr example set PORT=4525
+
+
 
 
 
