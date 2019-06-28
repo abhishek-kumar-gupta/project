@@ -140,6 +140,42 @@ app.listen(port, ()=> console.log(`Listening on port ${port}...`));
 
 
 
+##### 48 // Handeling htttp Get Request
+
+// we have made changes in same above 47thcode 
+
+const express =require('express'); 
+const app = express(); 
+const cources = [
+   { id: 1, name: 'course1' },
+   { id: 2, name: 'course1' },
+   { id: 3, name: 'course1' },
+];
+
+app.get('/',(req, res)=> {
+  res.send('Hello World.......');
+}) ;   
+app.get('/api/cources', (req, res)=>
+{           
+   res.send(cources);
+});
+
+app.get('/api/cources/:id', (req , res)=>
+{
+   const cource = cources.find(c=> c.id === parseInt(req.params.id));    //find in Predefinedmethod 
+    if(!cource) res.status(404).send('The cource with the given id was not found');
+    res.send(cource);
+});      //http://localhost:4200/api/cources/1
+         //http://localhost:4200/api/cources/10
+         //to check status 404 // inspect -> network -> all-> ctrl+r then check again
+
+const port = process.env.PORT || 4200;   
+app.listen(port, ()=> console.log(`Listening on port ${port}...`));  
+
+
+
+
+
 
 
 
