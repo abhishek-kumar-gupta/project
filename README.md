@@ -178,6 +178,108 @@ app.listen(port, ()=> console.log(`Listening on port ${port}...`));
 
 
 
+##### 49, 50 // Handeling htttp Get Request
+
+// we have made changes in same above 48thcode 
+
+
+const express =require('express'); 
+const app = express(); 
+
+app.use(express.json()); //ading a piece of middleware via express.json
+ // and then we call app.use to use  that middleware in a request processing pipeline 
+const cources = [
+
+   { id: 1, name: 'course1' },
+   { id: 2, name: 'course1' },
+   { id: 3, name: 'course1' },
+];
+
+
+app.get('/',(req, res)=> {
+  res.send('Hello World.......');
+}) ;   
+app.get('/api/cources', (req, res)=>
+{           
+   res.send(cources);
+});
+
+app.post('/api/cources', (req, res)=>
+{
+const cource = {
+  id: cources.length +1,
+  name: req.body.name  
+};
+
+cources.push(cource);
+res.send(cource);
+});
+
+app.get('/api/cources/:id', (req , res)=>
+{
+   const cource = cources.find(c=> c.id === parseInt(req.params.id));    //find in Predefinedmethod 
+    if(!cource) res.status(404).send('The cource with the given id was not found');
+    res.send(cource);
+}); 
+
+const port = process.env.PORT || 4200;   
+app.listen(port, ()=> console.log(`Listening on port ${port}...`));  
+
+// add postman extention in chrome 
+refer notes.
+
+
+
+##### // 70th Synchronous vs asnyc. code
+console.log('Before');
+setTimeout(() => {
+    console.log('Reading a user from a database...');
+}, 2000);   // setTimeout is async or non blocking function
+// async does not mean concurrent or multi threaded.
+console.log('After');
+
+
+
+
+
+
+##### // 71th Patterns for Dealing with asnyc. code
+//Three methods 
+// callbacks 
+// promises
+
+import { promises } from "fs";
+// async/await
+console.log('Before');
+// const user = getUser(1);  // cannot do this can not assign function here if we run we will get undefined. Why because this function is executing 2 sec. after. 
+// console.log(user); // so we run below line
+
+user = getUser(1);
+
+console.log('After');
+
+function getUser(id)
+{
+    setTimeout(() => {
+        console.log('Reading a user from a database...');
+return {id: id, gitHubUsername: 'mosh '};   
+ }, 2000);   
+
+ return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
